@@ -54,7 +54,7 @@ class CartManager {
             
             this.loadCartFromLocalStorage();
             // Show shop section by default
-            this.showSection('shop');
+            this.showSection('home');
         } catch (error) {
             console.error('Error loading services:', error);
             alert('加载服务数据时出错，请刷新页面重试。');
@@ -932,13 +932,27 @@ class CartManager {
             return;
         }
         
+        if (sectionId === 'shop') {
+            // 检查是否已经验证过验证码
+            const verificationCode = document.getElementById('verificationCode');
+            if (!verificationCode || !verificationCode.value) {
+                // 如果未验证,显示欢迎模态框
+                const welcomeModal = document.getElementById('welcomeModal');
+                if (welcomeModal) {
+                    welcomeModal.style.display = 'flex';
+                }
+                return;
+            }
+            // 验证通过后加载购物车并显示shop section
+            this.loadCartFromLocalStorage();
+        }
+
         // 隐藏所有部分
         sections.forEach(section => {
             section.classList.remove('active');
             section.style.display = 'none';
         });
-        
-        // 显示目标部分
+
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.style.display = 'block';
@@ -1028,8 +1042,8 @@ class CartManager {
         const welcomeModal = document.getElementById('welcomeModal');
         welcomeModal.style.display = 'none';
         
-        // 显示首页
-        this.showSection('home');
+        // // 显示cart
+        this.showSection('shop');
     }
 }
 
@@ -1037,12 +1051,7 @@ class CartManager {
 document.addEventListener('DOMContentLoaded', () => {
     // 初始化购物车管理器
     window.cartManager = new CartManager();
-    
-    // 显示欢迎模态框
-    const welcomeModal = document.getElementById('welcomeModal');
-    if (welcomeModal) {
-        welcomeModal.style.display = 'flex';
-    }
+
     
     // 添加导航链接点击事件
     document.querySelectorAll('nav a').forEach(link => {

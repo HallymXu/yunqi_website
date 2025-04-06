@@ -19,37 +19,39 @@
     <div class="watermark-content" id="watermarkContent"></div>
   </div>
 
-  <div id="welcomeModal" class="modal-overlay">
+  <div id="welcomeModal" class="modal-overlay" style="display: none;" onclick="if(event.target === this) this.style.display='none'">
     <div class="welcome-modal">
-      <h2>欢迎使用云起工作室</h2>
+      <h2>欢迎使用云起报价单</h2>
       <p>请输入您的姓名以继续</p>
+      <p>记得私信小助手获得优惠价！</p>
       <input type="text" id="userName" placeholder="请输入姓名" maxlength="20">
+      <input type="text" id="verificationCode" placeholder="请输入验证码" maxlength="6">
       <button class="btn primary" onclick="window.cartManager.submitUserName()">进入系统</button>
+      <button class="btn" onclick="document.getElementById('welcomeModal').style.display='none'">之后再说</button>
     </div>
   </div>
 
   <div id="loading" class="loading">加载中...</div>
   <nav>
     <a href="#" data-section="home">首页</a>
-    <a href="#" data-section="qa">服务亮点</a>
-    <a href="#" data-section="shop">购物车</a>
+    <a href="#" data-section="qa">服务详情</a>
+    <a href="#" data-section="shop">报价单</a>
     <a href="#" data-section="vip">SVIP托管</a>
   </nav>
 
   <div class="header">
     <h1>云起工作室｜科研投稿咨询与指导服务</h1>
-    <p>读博不易，知识卖艺，我们欢迎您加入！</p>
+    <p>读博不易，知识卖艺，期待给你带来帮助！</p>
   </div>
 
   <div class="section section-transition" id="home">
     <h2>欢迎访问云起工作室</h2>
-    <p>本平台聚焦科研投稿辅导与科研成长陪跑服务，覆盖自然科学、人文社科、医药学等多个学科。</p>
-    <p>我们提供高质量服务：选题指导、逻辑搭建、返修应对、投前把脉、母语润色、核心内容提炼、投稿流程陪跑等一站式解决方案。</p>
+    <p>探索科研投稿的艺术与科学！我们的专业团队提供全方位辅导服务，涵盖自然科学、经济管理、医药学等领域，特别擅长AI科学、定量分析、数据科学、统计和机器学习模型在多学科的应用。</p>
+    <p>享受我们的高端服务：从选题指导到逻辑搭建，从返修策略到投稿前的全面评估，再到母语级别的文稿润色和核心内容的精炼，我们提供一站式、全流程的科研投稿支持。</p>
 
     <h2>关于我们</h2>
-    <p>云起工作室由海内外TOP高校PhD组成，与知名刊物编辑、985高校审稿人建立了广泛合作。致力于为科研投稿过程提供策略性支持与个性化辅导，已协助多名本硕博作者成功发表SCI、SSCI、核心期刊论文。</p>
-    <p>我们重视合规、注重逻辑、善于规划，并持续拓展答疑服务、润色、科研诊断、文书定制、研究设计与留学就业辅导。</p>
-    
+    <p>云起工作室汇聚了来自全球顶尖高校的博士学位持有者，与众多知名期刊编辑及985高校审稿人建立了深入的合作关系。我们专注于提供策略性支持和个性化辅导，帮助众多本科生、硕士和博士生在SCI、SSCI及其他核心期刊上成功发表论文。</p>
+    <p>我们坚持合规经营，注重逻辑性和系统规划，不断扩展我们的服务范围，包括答疑、文稿润色、科研诊断、文书定制、研究设计及留学就业指导等。</p>
     <h2>联系我们</h2>
     <div class="contact-info">
     </div>
