@@ -1,0 +1,12 @@
+{
+  "name": "yunqi-admin",
+  "version": "1.0.0",
+  "description": "云起工作室管理后台",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+} 

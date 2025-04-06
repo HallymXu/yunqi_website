@@ -70,7 +70,7 @@
         "状态跟踪",
         "返修解读",
         "回复信指导",
-        "项目统筹"
+        "录用对赌"
       ],
       "serviceContent": "1. 科研选题指导\n2. 论文结构规划\n3. 写作模板提供\n4. 定期反馈与修改建议\n5. 投稿策略指导\n6. 全程答疑支持\n7. 投稿状态跟踪\n8. 返修意见解读\n9. 回复信撰写指导\n10. 项目整体统筹",
       "serviceDetail": "## 服务概述\n\nVIP项目合作为高端用户提供专属服务，包括项目整体规划、全程深度指导、高质量保障和资源对接。特色是专属导师团队、深度定制方案、全程质量把控和资源优先对接，确保成果输出保障。"
@@ -209,7 +209,7 @@
         "qrcode": "images/wechat_cooperation_qr.png"
       },
       "email": {
-        "address": "scientific_paper@example.com",
+        "address": "scientific_paper@gmail.com",
         "workingHours": "周一至周五 9:00-18:00",
         "responseTime": "24小时内",
         "urgentConsultation": "如需紧急咨询，请添加微信"
@@ -224,4 +224,4 @@
       "description": "版权所有"
     }
   }
-} 
+}
