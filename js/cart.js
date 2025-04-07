@@ -748,7 +748,7 @@ class CartManager {
     exportAsImage() {
         this.renderDetails();
         setTimeout(() => {
-            const targetElement = document.querySelector(".cart-summary");
+            const targetElement = document.querySelector("#cartSummary");
             if (!targetElement) return;
 
             html2canvas(targetElement, { scale: 2, useCORS: true }).then(quoteCanvas => {
